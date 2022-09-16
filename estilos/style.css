@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+htlm,body{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
+body{
+    background: url('../imagens/fundo-madeira.jpg') no-repeat top center; /* para náo repetir a imagem e centralizar*/
+    background-size: cover; /*para imagem preencher a tela toda*/
+    background-attachment: fixed; /*fixar mas nesse exp: sem utilidade*/
+
+}
+
+main{
+    position: relative;
+    height: 100vh;
+    
+}
+
+section#telefone{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*para centralizar á imagem*/
+    height: 627px;
+    width: 311px;
+    background:  url('../imagens/frame-iphone.png') no-repeat; /* lembrar que os dois pontos volta pasta*/
+}
+iframe#tela{
+    position: relative;
+    top: 80px;
+    left: 22px;
+    width: 269px;
+    height: 471px;
+}
+section#rede-sociais img{
+    width: 70px;
+    border-radius: 50%;
+    margin: 10px;
+    box-shadow: 1px 1px 1px 1px orange;
+    box-sizing: border-box; /* a borda pertencer a img*/
+}
+section#rede-sociais {
+    text-align: right;
+}
+section#rede-sociais img:hover{
+    box-shadow: 2px 2px 3px 3px rgba(90, 1, 1, 0.658);
+    transform: translate(-5px, 2px); /*movumentar a img ao passar o mouse*/
+    border: 5px solid rgba(255, 166, 0, 0.747);
+    transition: transform 0.5; /* transição do normal para o transform de 5px vai demorar 0,5 segundos*/
+    transition: border 3s;
+}
